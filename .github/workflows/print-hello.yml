@@ -1,0 +1,16 @@
+name: Print hello.txt
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  print-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Print hello.txt
+        run: cat hello.txt
